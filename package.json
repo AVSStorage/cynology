@@ -1,0 +1,38 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Cynology",
+  "scripts": {
+    "stylelint": "stylelint 'source/sass/**/*.sass' --syntax less",
+    "build": "grunt build",
+    "start": "npm run build && grunt serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "no"
+  },
+  "keywords": [
+    "site",
+    "wordpress",
+    "cynology"
+  ],
+  "author": "Alice Smirnova",
+  "license": "ISC",
+  "dependencies": {
+    "@mdi/font": "^3.5.95",
+    "autoprefixer": "^9.5.0",
+    "grunt": "^1.0.3",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-imagemin": "^3.1.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-csso": "^2.2.4",
+    "grunt-cwebp": "^2.1.1",
+    "grunt-postcss": "^0.9.0",
+    "imagemin-jpegtran": "^6.0.0",
+    "load-grunt-tasks": "^4.0.0",
+    "stylelint": "^9.10.1"
+  }
+}
