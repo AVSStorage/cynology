@@ -1,0 +1,35 @@
+body {
+  min-width: 320px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: $black;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: $white;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+input:-ms-input-placeholder {
+  color: #c7c7c7;
+}
