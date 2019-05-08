@@ -93,4 +93,21 @@
 
 
   }
+
+  @media (min-width: 1400px) {
+    &__title {
+      font-size: 50px;
+      line-height: 50px;
+    }
+    &__wrapper {
+      margin-top: 5%;
+    }
+    &__text {
+      font-size: 1.5vw;
+    }
+
+    &-right__wrapper {
+      margin-top: 15%;
+    }
+  }
 }

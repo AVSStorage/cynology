@@ -36,6 +36,9 @@
       @include mdi-icon("menu");
 
       &::before {
+        top: -10px;
+        position: absolute;
+        left: -5px;
         font-size: 50px;
       }
     }
@@ -55,6 +58,9 @@
       @include mdi-icon("close");
 
       &::before {
+        top: -10px;
+        position: absolute;
+        left: -5px;
         font-size: 50px;
       }
     }

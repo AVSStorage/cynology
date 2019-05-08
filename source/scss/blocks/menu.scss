@@ -107,4 +107,17 @@
       font-size: 16px;
     }
   }
+
+
+  @media (min-width: 1400px) {
+    &__link {
+      font-size: 1.5vw;
+    }
+
+    &__dropdown {
+      &:before {
+        top: 35%;
+      }
+    }
+  }
 }

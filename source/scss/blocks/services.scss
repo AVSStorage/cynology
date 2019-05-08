@@ -141,4 +141,11 @@
       lost-waffle: 11/12;
     }
   }
+  @media (min-width: 1400px) {
+    &__item {
+      &-text {
+        font-size: 1.5vw;
+      }
+    }
+  }
 }
