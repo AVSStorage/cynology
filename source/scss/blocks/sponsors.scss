@@ -1,0 +1,133 @@
+.sponsors {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 2%;
+  }
+
+  &__gallery {
+    lost-flex-container: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+  }
+
+  &__title {
+    padding-left: 5%;
+  }
+
+  &__prev {
+    background-image: url("../img/icon-left-arrow.png");
+  }
+
+  &__next {
+    background-image: url("../img/icon-right-arrow.png");
+  }
+
+  &__prev,
+  &__next {
+    font-size: 0;
+    height: 10vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    background-size: contain;
+  }
+
+  &__image {
+
+    width: 80%;
+    height: 30vw;
+    background-repeat: no-repeat;
+    display: none;
+    margin-bottom: 0 !important;
+
+
+    &--department {
+      display: block;
+      background-position: center;
+      background-image: url("../img/logo-department.png");
+    }
+
+    &--union {
+      background-image: url("../img/logo-union.png");
+    }
+
+    &--LG {
+      background-image: url("../img/logo-LG.png");
+    }
+
+    &--hotel {
+      background-image: url("../img/logo-holtel.png");
+    }
+  }
+
+  @media (min-width: $break-point-450) {
+    &__image {
+      display: block;
+      lost-waffle: 5/12 2;
+      height: 20vw;
+      background-size: contain;
+      background-position: center;
+
+      &--union {
+        display: none;
+      }
+
+      &--LG {
+        display: none;
+      }
+    }
+  }
+  @media (min-width: $tablet-width) {
+    &__image {
+      height: 15vw;
+    }
+
+    &__wrapper {
+      background-color: $white;
+    }
+    &__title {
+      padding-left: 3%;
+    }
+  }
+
+  @media (min-width: 1000px) {
+
+    &__prev {
+      margin-right: 2%;
+    }
+
+    &__next {
+      margin-left: 2%;
+    }
+    &__gallery {
+      padding-top: 3%;
+      padding-bottom: 3%;
+    }
+    &__image {
+      lost-waffle: 4/12 3 10px;
+      height: 10vw;
+
+      &--LG {
+        display: block;
+      }
+    }
+  }
+
+  @media (min-width: 1150px) {
+    &__image {
+      lost-waffle: 3/12 4 10px;
+      height: 10vw;
+
+      &--union {
+        display: block;
+      }
+    }
+  }
+
+}

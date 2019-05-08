@@ -1,0 +1,87 @@
+.user-menu {
+  @include list-unstyled();
+  width: 100%;
+  border-bottom: 1px solid $gray;
+
+  &__item {
+    padding: 5% 0 5%;
+    display: flex;
+
+    &--button {
+      display: flex;
+      justify-content: center;
+      padding-top: 0;
+    }
+  }
+
+  &__phone {
+    @include mdi-icon('phone');
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    &::before {
+      z-index: 1;
+      color: $navy;
+    }
+  }
+
+  &__button {
+    font-family: Roboto;
+    background-color: $red;
+    box-shadow: 0 0 24px 2px rgba(0, 0, 0, 0.17);
+    border-radius: 3px;
+    color: $white;
+    text-align: center;
+    padding: 5% 7%;
+    border: none;
+  }
+
+  @media (min-width: $break-point-500) {
+    &__button {
+      padding: 2% 5%;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+
+    width: 45%;
+
+    &__phone {
+      color: $white;
+      font-weight: bold;
+      font-size: 14px;
+
+      &:before {
+        color: $white;
+        margin: 0;
+        font-size: 15px;
+      }
+    }
+
+    &__item {
+      &--button {
+        width: 50%;
+      }
+    }
+
+    &__button {
+      width: 100%;
+      margin-left: 15%;
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: none;
+  }
+
+  @media (min-width: 1050px) {
+    &__phone {
+      font-size: 17px;
+
+      &:before {
+        font-size: 17px;
+      }
+    }
+  }
+}

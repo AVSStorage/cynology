@@ -1,0 +1,8 @@
+.social {
+  @include list-unstyled();
+  display: flex;
+
+  &__item {
+    padding-left: 10px;
+  }
+}

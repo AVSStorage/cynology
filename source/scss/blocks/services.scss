@@ -1,0 +1,117 @@
+.services {
+  &__wrapper {
+    lost-flex-container: row;
+    padding-left: 5%;
+  }
+
+  &__title {
+    width: 100%;
+  }
+
+  &__item {
+    lost-waffle: 6/12 2 10px;
+    position: relative;
+
+
+    &-text {
+      font-family: Oswald;
+      font-weight: 500;
+      font-size: 4vw;
+      line-height: 4vw;
+      top: 0;
+      position: absolute;
+      color: $white;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin-right: 5%;
+      margin-top: 5%;
+    }
+
+
+    &-image {
+
+      height: 30vw;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right;
+      margin-right: 5%;
+
+      &--1 {
+        background-image: url("../img/service-dog1.png");
+      }
+
+      &--2 {
+        background-image: url("../img/service-dog2.png");
+      }
+
+      &--3 {
+        background-image: url("../img/service-dog3.png");
+      }
+
+      &--4 {
+        background-image: url("../img/service-dog4.png");
+      }
+
+      &--5 {
+        background-image: url("../img/service-dog5.png");
+      }
+
+      &--6 {
+        background-image: url("../img/service-dog6.png");
+      }
+    }
+  }
+
+
+  @media (min-width: $break-point-450) {
+    &__item {
+      &-text {
+        font-size: 3vw;
+      }
+    }
+  }
+
+  @media (min-width: $break-point-615) {
+
+    &__item {
+      &-text {
+        font-size: 3vw;
+        line-height: 3vw;
+      }
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    &__title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      opacity: 0.2;
+      color: #1f2837;
+      font-family: Oswald;
+      font-size: 10vw;
+      //transform: rotate(-90deg);
+    }
+
+    &__item {
+      lost-waffle: 4/12 3 10px;
+
+      &-text {
+        padding: 3%;
+        font-size: 2vw;
+      }
+
+      &-image {
+        height: 21vw;
+      }
+    }
+
+    &__wrapper {
+      padding-left: 3%;
+      lost-waffle: 12/12;
+      padding-bottom: 3%;
+    }
+  }
+}

@@ -8,3 +8,17 @@
   padding-left: 150px;
   padding-right: 150px;
 }
+
+@mixin padding-mobile-blocks() {
+  padding: 5%;
+}
+
+@mixin image-hover-effect() {
+  border-radius: 30px;
+  transition: border-radius 1s;
+}
+
+@mixin h2-tablet-styles() {
+  font-size: 3vw;
+  line-height: 3vw;
+}

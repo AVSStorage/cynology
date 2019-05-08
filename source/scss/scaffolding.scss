@@ -6,10 +6,33 @@ body {
   font-size: 16px;
   font-weight: 400;
   background-color: $white;
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/background-tablet.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: $gray;
+  }
 }
 
 .container {
+  //width: $tablet-width;
   margin: 0 auto;
+  font-size: $mobile-font-size;
+
+  @media (min-width: $break-point-450) {
+    font-size: 4vw;
+    line-height: 4vw;
+  }
+
+  @media (min-width: $break-point-615) {
+    font-size: 3.5vw;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    font-size: 2vw;
+    line-height: 2vw;
+  }
 }
 
 html {

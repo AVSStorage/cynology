@@ -1,0 +1,105 @@
+.menu {
+  @include list-unstyled();
+  width: 100%;
+
+  &__item {
+    width: 100%;
+    border-bottom: 1px solid $gray;
+
+    &--dropdown {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &--dropdown {
+    display: none;
+  }
+
+  &__dropdown {
+    @include mdi-icon("chevron-down");
+    width: 5%;
+    height: 5vw;
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: $mobile-font-size;
+      margin: 0;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 5% 0 5%;
+    color: $black;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  @media (min-width: $break-point-450) {
+    &__link {
+      padding: 3% 0 3%;
+    }
+
+    &__dropdown {
+      height: $mobile-font-size;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 40%;
+    margin-left: 3%;
+
+    &__item {
+      border: none;
+      flex-basis: content;
+      margin-right: 5%;
+    }
+
+
+    &--dropdown {
+      display: none;
+    }
+
+    &__dropdown {
+      &::before {
+        position: absolute;
+        left: 0;
+        font-size: 25px;
+        margin: 0;
+        top: 20%;
+      }
+    }
+  }
+  @media (min-width: 870px) {
+    &__dropdown {
+      &:before {
+        top: 25%;
+      }
+    }
+  }
+
+  @media (min-width: 1040px) {
+    &__dropdown {
+      &:before {
+        top: 30%;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include padding-paragraph();
+  }
+}

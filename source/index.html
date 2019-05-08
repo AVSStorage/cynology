@@ -11,7 +11,13 @@
 <body>
 <div class="wrapper">
     <header class="page-header">
-        <nav class="main-nav menu main-nav--opened">
+        <nav class="main-nav main-nav--open">
+            <div class="main-nav__active-item">
+                <a class="main-nav__logo" href="index.html" aria-label="Логотип Real Group" tabindex="1">
+                    <img class="main-nav__logo-img" src="img/logo.png" alt="Real group" width="94" height="80">
+                </a>
+                <button class="main-nav__toggle" type="button">Открыть меню</button>
+            </div>
             <div class="main-nav__wrapper container">
                 <a class="main-nav__logo" href="index.html" aria-label="Логотип Real Group" tabindex="1">
                     <img class="main-nav__logo-img" src="img/logo.png" alt="Real group" width="94" height="80">
@@ -23,24 +29,23 @@
                     </li>
                     <li class="menu__item menu__item--dropdown">
                         <a class="menu__link" href="#">Услуги</a>
+                        <button class="menu__dropdown">Раскрыть меню</button>
                     </li>
                     <li class="menu__item">
                         <a class="menu__link" href="#">Контакты</a>
                     </li>
                 </ul>
                 <ul class="main-nav__user-list user-menu">
-                    <li class="user-menu__item user-menu__item--phone" tabindex="4">
-                        <a class="user-menu__link" href="#">
-                            <span class="user-menu__phone"> +7 499 390-00-18</span>
-                        </a>
+                    <li class="user-menu__item" tabindex="4">
+                        <span class="user-menu__phone"> +7 499 390-00-18</span>
                     </li>
                     <li class="user-menu__item user-menu__item--button">
                         <button type="submit" class="user-menu__button">Заказать звонок</button>
                     </li>
                 </ul>
-                <ul class="main-nav__user-list dropdown-menu">
-                    <li class="dropdown-menu__item">
-                        <a class="dropdown-menu__link">Пункт меню1</a>
+                <ul class="main-nav__user-list menu menu--dropdown">
+                    <li class="menu__item">
+                        <a class="menu__link">Пункт меню1</a>
                     </li>
                 </ul>
             </div>
@@ -49,34 +54,38 @@
     <main>
         <section class="products-info">
             <div class="products-info__wrapper container">
-                <div class="products-info__preview">
-                    <h3 class="products-info__subtitle">Кинологический центр Регул групп</h3>
-                    <h2 class="products-info__title">Полный спектр кинологических услуг</h2>
-                </div>
+                <h3 class="products-info__subtitle">Кинологический центр Регул групп</h3>
+                <h2 class="products-info__title">Полный спектр кинологических услуг</h2>
             </div>
         </section>
         <section class="advantages">
             <div class="advantages__wrapper container">
                 <ul class="advantages__list">
                     <li class="advantages__item">
-                        <span class="advantages__item-image"></span>
-                        <span class="advantages__item-title">Качество</span>
-                        <p class="advantages__item-text">Все наши собаки сертифицированы по поиску взрывчатых веществ
+                        <span class="advantages__item-image advantages__item-image--1"></span>
+                        <p class="advantages__item-wrapper">
+                            <span class="advantages__item-title">Качество</span>
+                        <span class="advantages__item-text">Все наши собаки сертифицированы по поиску взрывчатых веществ
                             Экспертно-консультационным
-                            Советом </p>
+                            Советом </span>
+                        </p>
                     </li>
                     <li class="advantages__item">
-                        <span class="advantages__item-image"></span>
+                        <span class="advantages__item-image advantages__item-image--2"></span>
+                    <p class="advantages__item-wrapper">
                         <span class="advantages__item-title">Квалификация</span>
-                        <p class="advantages__item-text">Квалификация, многократно подтвержденная на сертификатных
-                            состязаниях, выставках по
-                            безопасности, оперативных выездах</p>
+                        <span class="advantages__item-text">Квалификация, многократно подтвержденная на сертификатных
+                        состязаниях, выставках по
+                        безопасности, оперативных выездах</span>
+                    </p>
                     </li>
                     <li class="advantages__item">
-                        <span class="advantages__item-image"></span>
-                        <span class="advantages__item-title">Выгода</span>
-                        <p class="advantages__item-text">КЦ «РЕГУЛ ГРУПП», может входить
-                            в состав служб безопасности, что позволит повысить эффективность работы и качество услуг</p>
+                        <span class="advantages__item-image advantages__item-image--3"></span>
+                        <p class="advantages__item-wrapper">
+                            <span class="advantages__item-title">Выгода</span>
+                             <span class="advantages__item-text">КЦ «РЕГУЛ ГРУПП», может входить
+                            в состав служб безопасности, что позволит повысить эффективность работы и качество услуг</span>
+                        </p>
                     </li>
                 </ul>
             </div>
@@ -87,7 +96,8 @@
                     <div class="info__wrapper container">
                         <p class="info__text">Наша компания создана в 2017 году с целью предоставления всего спектра
                             кинологических услуг.</p>
-                        <p class="info__text"> Наша основная деятельность — поиск взрывчатых веществ, взрывоопасных
+                        <p class="info__text info__text--mobile"> Наша основная деятельность — поиск взрывчатых веществ,
+                            взрывоопасных
                             предметов, взрывных
                             устройств и наркотических средств при досмотре:
                         </p>
@@ -96,90 +106,100 @@
                 <section class="info-places">
                     <div class="info-places__wrapper">
                         <div class="info-places__item">
-                            <div class="info-places__item-image"></div>
+                            <div class="info-places__item-image info-places__item-image--palace"></div>
                             <p class="info-places__item-text">Зданий, в том числе учреждений образования
                                 и медицинского обслуживания</p>
                         </div>
                         <div class="info-places__item">
-                            <div class="info-places__item-image"></div>
+                            <div class="info-places__item-image info-places__item-image--forest"></div>
                             <p class="info-places__item-text">Участков местности</p>
                         </div>
                         <div class="info-places__item">
-                            <div class="info-places__item-image"></div>
+                            <div class="info-places__item-image info-places__item-image--weight"></div>
                             <p class="info-places__item-text">Грузов</p>
                         </div>
                         <div class="info-places__item">
-                            <div class="info-places__item-image"></div>
+                            <div class="info-places__item-image info-places__item-image--train"></div>
                             <p class="info-places__item-text">Транспортных средств (автотранспорт, железнодорожный
                                 транспорт, авиатранспорт)</p>
                         </div>
                         <div class="info-places__item">
-                            <div class="info-places__item-image"></div>
+                            <div class="info-places__item-image info-places__item-image--laggage"></div>
                             <p class="info-places__item-text">Багажа</p>
                         </div>
                     </div>
                 </section>
             </div>
             <div class="info-right__wrapper">
-                <h2 class="info__title">Наша задача — ваша безопасность</h2>
+                <h2 class="info__title">Наша задача — <br> ваша безопасность</h2>
                 <section class="info-video">
                     <div class="info-video__wrapper">
-                        <p class="info-vieo__title">Смотреть видео о нашей работе</p>
-                        <div class="info-video__image"></div>
-                        <img src="img/icon-youtube.png" width="35" height="25">
+                        <div class="info-video__image">
+                            <p class="info-video__title"></p>
+                            <svg class="info-video__button" xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 48 48" version="1.1" width="35px" height="45px">
+                                <g id="surface1">
+                                    <path style=" fill:#FF3D00;"
+                                          d="M 43.199219 33.898438 C 42.800781 36 41.101563 37.601563 39 37.898438 C 35.699219 38.398438 30.199219 39 24 39 C 17.898438 39 12.398438 38.398438 9 37.898438 C 6.898438 37.601563 5.199219 36 4.800781 33.898438 C 4.398438 31.601563 4 28.199219 4 24 C 4 19.800781 4.398438 16.398438 4.800781 14.101563 C 5.199219 12 6.898438 10.398438 9 10.101563 C 12.300781 9.601563 17.800781 9 24 9 C 30.199219 9 35.601563 9.601563 39 10.101563 C 41.101563 10.398438 42.800781 12 43.199219 14.101563 C 43.601563 16.398438 44.101563 19.800781 44.101563 24 C 44 28.199219 43.601563 31.601563 43.199219 33.898438 Z "/>
+                                    <path style=" fill:#FFFFFF;" d="M 20 31 L 20 17 L 32 24 Z "/>
+                                </g>
+                            </svg>
+                        </div>
                     </div>
                 </section>
             </div>
         </div>
         <section class="services">
+            <h2 class="services__title">Услуги</h2>
             <div class="services__wrapper">
-                <h2 class="services__title">Услуги</h2>
                 <div class="services__item">
-                    <div class="servicec__item-image"></div>
+                    <div class="services__item-image services__item-image--1"></div>
                     <p class="services__item-text">Обнаружение взрывчатых веществ
                         и устройств</p>
                 </div>
                 <div class="services__item">
-                    <div class="servicec__item-image"></div>
+                    <div class="services__item-image services__item-image--2"></div>
                     <p class="services__item-text">Обнаружение наркотических средств
                         и психотропных веществ</p>
                 </div>
                 <div class="services__item">
-                    <div class="servicec__item-image"></div>
+                    <div class="services__item-image services__item-image--3"></div>
                     <p class="services__item-text">Караульная служба по охране объектов</p>
                 </div>
                 <div class="services__item">
-                    <div class="servicec__item-image"></div>
+                    <div class="services__item-image services__item-image--4"></div>
                     <p class="services__item-text">Обеспечение безопасности
                         при проведении массовых
                         мероприятий</p>
                 </div>
                 <div class="services__item">
-                    <div class="servicec__item-image"></div>
+                    <div class="services__item-image  services__item-image--5"></div>
                     <p class="services__item-text">Использование собак для личной охраны VIP лиц</p>
                 </div>
                 <div class="services__item">
-                    <div class="servicec__item-image"></div>
+                    <div class="services__item-image  services__item-image--6"></div>
                     <p class="services__item-text">Дрессировка собак и продажа щенков</p>
                 </div>
             </div>
         </section>
         <section class="sponsors">
             <h2 class="sponsors__title">Нам доверяют</h2>
-            <div class="sponsors__gallery">
+            <div class="sponsors__wrapper">
                 <button class="sponsors__prev">Предыдущий</button>
-                <div class="sponsors__image"></div>
-                <div class="sponsors__image"></div>
-                <div class="sponsors__image"></div>
-                <div class="sponsors__image"></div>
+                <div class="sponsors__gallery">
+                    <div class="sponsors__image sponsors__image--department"></div>
+                    <div class="sponsors__image sponsors__image--hotel"></div>
+                    <div class="sponsors__image sponsors__image--LG"></div>
+                    <div class="sponsors__image sponsors__image--union"></div>
+                </div>
                 <button class="sponsors__next">Следующий</button>
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
         <div class="footer__wrapper">
             <div class="footer__wrapper-left">
-                <ul class="footer__menu menu">
+                <ul class="footer__menu">
                     <li class="menu__item">
                         <a class="menu__link" href="#">О компании</a>
                     </li>
@@ -190,42 +210,44 @@
                         <a class="menu__link" href="#">Контакты</a>
                     </li>
                 </ul>
-                <img src="img/logo-postavki.png" width="42" height="45">
                 <div class="footer__social">
+                    <img class="footer__social-providers" src="img/logo-postavki.png" alt="Поставки" width="42" height="45">
                     <ul class="footer__social-list social">
                         <li class="social__item">
                             <a class="social__link" aria-label="Facebook"><img src="img/icon-facebook.png" width="40"
-                                                                               height="40"></a>
+                                                                               height="40" alt="Фейсбук"></a>
                         </li>
                         <li class="social__item">
                             <a class="social__link" aria-label="VK"><img src="img/icon-vk.png" width="40"
-                                                                         height="40"></a>
+                                                                         height="40" alt="Вконтакте"></a>
                         </li>
                         <li class="social__item">
-                            <a class="social__link" aria-label="Inastagram"><img src="img/icon-instagram.png"></a>
+                            <a class="social__link" aria-label="Inastagram"><img src="img/icon-instagram.png" alt="Инстаграм"></a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="footer__wrapper-right">
-            <p class="footer__contacts">
-                <span class="footer__contacts-title">Адрес:</span>
-                117419, город Москва, улица Цюрупы,
-                дом 1а, строение 2, помещение 3.
-            </p>
-            <p class="footer__contacts">
-                <span class="footer__contacts-title">Тел.:</span>
-                8 (499) 390 00 18
-            </p>
-            <p class="footer__contacts">
-                <span class="footer__contacts-title">Моб.:</span>
-                8 (499) 390 00 18
-            </p>
-            <p class="footer__contacts">
-                <span class="footer__contacts-title">Эл. почта: </span>
-                regul-group@mail.ru, regul-k9@mail.ru
-            </p>
+            <div class="footer__wrapper-right">
+                <p class="footer__contacts">
+                    <span class="footer__contacts-title">Адрес:</span>
+                    117419, город Москва, улица Цюрупы,
+                    дом 1а, строение 2, помещение 3.
+                </p>
+                <div class="footer__contacts-wrapper">
+                    <p class="footer__contacts">
+                        <span class="footer__contacts-title">Тел.:</span>
+                        8 (499) 390 00 18
+                    </p>
+                    <p class="footer__contacts">
+                        <span class="footer__contacts-title">Моб.:</span>
+                        8 (499) 390 00 18
+                    </p>
+                </div>
+                <p class="footer__contacts">
+                    <span class="footer__contacts-title">Эл. почта: </span>
+                    regul-group@mail.ru, regul-k9@mail.ru
+                </p>
+            </div>
         </div>
     </footer>
 </div>

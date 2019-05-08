@@ -33,6 +33,13 @@
     "grunt-postcss": "^0.9.0",
     "imagemin-jpegtran": "^6.0.0",
     "load-grunt-tasks": "^4.0.0",
+    "lost": "^8.3.1",
     "stylelint": "^9.10.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-postcss": "^0.9.0"
   }
 }
