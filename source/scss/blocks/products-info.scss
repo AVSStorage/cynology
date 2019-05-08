@@ -38,4 +38,10 @@
       width: 50%;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &__title {
+      font-size: 50px;
+    }
+  }
 }

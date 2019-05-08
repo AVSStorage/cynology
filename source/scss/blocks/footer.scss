@@ -5,6 +5,10 @@
     flex-direction: column;
   }
 
+  &__menu {
+    @include list-unstyled();
+  }
+
   &__wrapper-left {
     padding: 5% 0 0%;
     padding-top: 0;
@@ -139,6 +143,7 @@
     &__social {
       padding-top: 0;
       flex-direction: column;
+      background-color: transparent;
 
       &-providers {
         width: 6.5vw;
@@ -174,5 +179,13 @@
         min-height: auto;
       }
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    &__wrapper {
+      padding-top: 3%;
+      background-color: $gray;
+    }
+
   }
 }

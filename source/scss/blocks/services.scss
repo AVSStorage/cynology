@@ -6,6 +6,8 @@
 
   &__title {
     width: 100%;
+    font-family: "Oswald", sans-serif;
+    padding-left: 5%;
   }
 
   &__item {
@@ -14,7 +16,7 @@
 
 
     &-text {
-      font-family: Oswald;
+      font-family: "Oswald", sans-serif;
       font-weight: 500;
       font-size: 4vw;
       line-height: 4vw;
@@ -90,9 +92,9 @@
       width: 100%;
       opacity: 0.2;
       color: #1f2837;
-      font-family: Oswald;
       font-size: 10vw;
-      //transform: rotate(-90deg);
+      padding-left: 0;
+
     }
 
     &__item {
@@ -112,6 +114,31 @@
       padding-left: 3%;
       lost-waffle: 12/12;
       padding-bottom: 3%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    margin-top: 5%;
+
+    &__item {
+      lost-waffle: 4/12 3 10px;
+
+      &-text {
+        font-size: 18px;
+        font-weight: 800;
+      }
+    }
+    &__title {
+      width: 5%;
+      letter-spacing: -10px;
+      font-size: 145px;
+      transform: rotate(-90deg);
+      padding-top: 6%;
+    }
+
+    &__wrapper {
+      lost-waffle: 11/12;
     }
   }
 }
