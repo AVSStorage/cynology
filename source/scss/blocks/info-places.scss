@@ -6,7 +6,7 @@
   }
 
   &__item {
-    lost-waffle: 6/12 2 10px;
+    lost-waffle: 6/12 2 10px float-right;
 
     &-text {
       display: none;
@@ -73,7 +73,7 @@
       }
     }
     &__item {
-      lost-waffle: 6/12 2 20px;
+      lost-waffle: 6/12 2 20px float-right;
 
       &-text {
         font-size: 1.8vw;
@@ -97,7 +97,7 @@
     }
 
     &__item {
-      lost-waffle: 6/12 2 50px;
+      lost-waffle: 6/12 2 50px float-right;
 
       &-text {
         font-size: 16px;
